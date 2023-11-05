@@ -16,7 +16,8 @@ The image processing part of the assignment was implemented using a PyScript pag
 
 - **accel**: A simple module I created, based on code provided earlier in the semester. It facilitates reading data from the accelerometer. It defines an Accelerometer class, initialized with the corresponding I2C pins, and includes functions, `read_a()` and `read_g()`, which return tuples containing acceleration and gyroscope values, respectively.
 
-- **connect2wifi**: Another simple module I developed, based on code from earlier in the semester. It is responsible for connecting to the specified Wi-Fi network. It takes input in the form of a dictionary with the format `wifi={'ssid':'network_name','pass':'network_password'}`.
+- **connect2wifi**: Another simple module I developed, based on code from earlier in the semester. It is responsible for connecting to the specified Wi-Fi network. It takes input in the form of a dictionary with the format
+`wifi={'ssid':'network_name','pass':'network_password'}`.
 
 ## Links to packages used that are not mine
 
