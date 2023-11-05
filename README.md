@@ -1,22 +1,29 @@
 # ME35Midterm
-Welcome to my GitHub repository for my ME-35: Intro to Robotics midterm assignment.
-To see all the details about what the project entailed and how I completed it check out my [Notion page](https://www.notion.so/Midterm-Reading-the-Temperature-plus-some-8a9a66b3cea440bfb427b6d7f3f0bd2e?pvs=4).
 
-The image processing part of the assignment was done using a PyScript page which can be found [here](https://esarvey.pyscriptapps.com/me35-midterm-copy/latest/).
-My professor created the HTML outline and some underlying python functions, and I added my code to the repl and saved it in the HTML so when the page loads you can see the code I added. This program detects the most prominent rgb channel of the largest item placed in the frame and updates an Airtable database with that color. I also added the code I added to the repl as the file "cv2_pyscript.py" in this repository.
+Welcome to my GitHub repository for my ME-35: Intro to Robotics midterm assignment. For a detailed overview of the project's requirements and my approach, please visit my [Notion page](https://www.notion.so/Midterm-Reading-the-Temperature-plus-some-8a9a66b3cea440bfb427b6d7f3f0bd2e?pvs=4).
 
-Contents:
-- MidtermPC: Python3 program that runs on local PC to update Adafruit Dashboard when the color cell changes in Airtable.
-- MidtermPico: Micropython program that runs on the Raspberry Pi Pico and connects to Airtable, Adafruit IO, reads a thermistor and accelerometer, and controls a servo motor.
-- MidtermPyscript: Code input to the Pyscript repl that processes the image captured to detect if the color of the largest object in the frame is red, green, or blue and updates the Airtable accordingly.
-- ThermistorMath: Python3 program that I used to verify the math used to calculate the temperature from the thermistor resistance. It creates a plot that shows the resistance-temperature curve for the thermistor and ADC voltage-temperature curve if used in a voltage divider with a certain load resistor. The current values in the program are based on the measured values for the resistor used in the project.
-- accel: A simple module I created based on code provided earlier in the semester which is used to read the accelerometer. It defines an Accelerometer class which is initialized with the corresponding i2c pins used and has functions, '''_.read_a()''' and '''_.read_g()''' which return a tuple with the acceleration and gyroscope values respectively.
-- connect2wifi: A simple module I created based on code provided earlier in the semester which connects to the wifi network specified in the input. It takes a dictionary input with the format '''wifi={'ssid':'network_name','pass': 'network_password}'''
+The image processing part of the assignment was implemented using a PyScript page, which can be found [here](https://esarvey.pyscriptapps.com/me35-midterm-copy/latest/). My professor provided the HTML framework and some underlying Python functions, while I contributed my code to the REPL and saved it within the HTML. When you access the page, you can view the code I added. This program identifies the most prominent RGB channel of the largest object within the frame and updates an Airtable database with the detected color. The code I added to the REPL is also available as "cv2_pyscript.py" in this repository.
 
-Links to packages used that are not mine:
+## Contents
+
+- **MidtermPC**: Python3 program that runs on a local PC to update the Adafruit Dashboard when the color cell changes in Airtable.
+
+- **MidtermPico**: MicroPython program designed to run on the Raspberry Pi Pico, which connects to Airtable, Adafruit IO, reads data from a thermistor and accelerometer, and controls a servo motor.
+
+- **MidtermPyscript**: Code input for the Pyscript REPL, responsible for processing the captured image to detect the color of the largest object in the frame, which can be red, green, or blue. The Airtable is updated accordingly.
+
+- **ThermistorMath**: Python3 program that I used to verify the mathematical calculations for determining the temperature from the thermistor resistance. It generates a plot illustrating the resistance-temperature curve for the thermistor and the ADC voltage-temperature curve when used in a voltage divider with a specific load resistor. The values within the program are based on measurements of the resistor used in the project.
+
+- **accel**: A simple module I created, based on code provided earlier in the semester. It facilitates reading data from the accelerometer. It defines an Accelerometer class, initialized with the corresponding I2C pins, and includes functions, `read_a()` and `read_g()`, which return tuples containing acceleration and gyroscope values, respectively.
+
+- **connect2wifi**: Another simple module I developed, based on code from earlier in the semester. It is responsible for connecting to the specified Wi-Fi network. It takes input in the form of a dictionary with the format `wifi={'ssid':'network_name','pass':'network_password'}`.
+
+## Links to packages used that are not mine
+
 - [GPIO LCD Control](https://www.circuitschools.com/interfacing-16x2-lcd-module-with-raspberry-pi-pico-with-and-without-i2c/#google_vignette)
+
 - [micropython-servo](https://pypi.org/project/micropython-servo/)
 
-And this package I used to figure out how to connect to the Adafruit MQTT broker using paho-mqtt although I did not use it in the final program:
-- [Adafruit IO MQTT Package](https://github.com/adafruit/Adafruit_IO_Python/blob/master/Adafruit_IO/mqtt_client.py)
+Additionally, I consulted the following package to learn how to connect to the Adafruit MQTT broker using paho-mqtt, although I did not integrate it into the final program:
 
+- [Adafruit IO MQTT Package](https://github.com/adafruit/Adafruit_IO_Python/blob/master/Adafruit_IO/mqtt_client.py)
