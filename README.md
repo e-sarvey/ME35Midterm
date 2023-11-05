@@ -6,18 +6,23 @@ The image processing part of the assignment was implemented using a PyScript pag
 
 ## Contents
 
-- **MidtermPC**: Python3 program that runs on a local PC to update the Adafruit Dashboard when the color cell changes in Airtable.
+- **MidtermPC**: 
+  Python3 program that runs on a local PC to update the Adafruit Dashboard when the color cell changes in Airtable.
 
-- **MidtermPico**: MicroPython program designed to run on the Raspberry Pi Pico, which connects to Airtable, Adafruit IO, reads data from a thermistor and accelerometer, and controls a servo motor.
+- **MidtermPico**: 
+  MicroPython program designed to run on the Raspberry Pi Pico, which connects to Airtable, Adafruit IO, reads data from a thermistor and accelerometer, and controls a servo motor.
 
-- **MidtermPyscript**: Code input for the Pyscript REPL, responsible for processing the captured image to detect the color of the largest object in the frame, which can be red, green, or blue. The Airtable is updated accordingly.
+- **MidtermPyscript**: 
+  Code input for the Pyscript REPL, responsible for processing the captured image to detect the color of the largest object in the frame, which can be red, green, or blue. The Airtable is updated accordingly.
 
-- **ThermistorMath**: Python3 program that I used to verify the mathematical calculations for determining the temperature from the thermistor resistance. It generates a plot illustrating the resistance-temperature curve for the thermistor and the ADC voltage-temperature curve when used in a voltage divider with a specific load resistor. The values within the program are based on measurements of the resistor used in the project.
+- **ThermistorMath**: 
+  Python3 program that I used to verify the mathematical calculations for determining the temperature from the thermistor resistance. It generates a plot illustrating the resistance-temperature curve for the thermistor and the ADC voltage-temperature curve when used in a voltage divider with a specific load resistor. The values within the program are based on measurements of the resistor used in the project.
 
-- **accel**: A simple module I created, based on code provided earlier in the semester. It facilitates reading data from the accelerometer. It defines an Accelerometer class, initialized with the corresponding I2C pins, and includes functions, `read_a()` and `read_g()`, which return tuples containing acceleration and gyroscope values, respectively.
+- **accel**: 
+  A simple module I created, based on code provided earlier in the semester. It facilitates reading data from the accelerometer. It defines an Accelerometer class, initialized with the corresponding I2C pins, and includes functions, `read_a()` and `read_g()`, which return tuples containing acceleration and gyroscope values, respectively.
 
-- **connect2wifi**: Another simple module I developed, based on code from earlier in the semester. It is responsible for connecting to the specified Wi-Fi network. It takes input in the form of a dictionary with the format
-`wifi={'ssid':'network_name','pass':'network_password'}`.
+- **connect2wifi**: 
+  Another simple module I developed, based on code from earlier in the semester. It is responsible for connecting to the specified Wi-Fi network. It takes input in the form of a dictionary with the format `wifi={'ssid':'network_name','pass':'network_password'}`.
 
 ## Links to packages used that are not mine
 
