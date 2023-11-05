@@ -30,6 +30,6 @@ The image processing part of the assignment was implemented using a PyScript pag
 
 - [micropython-servo](https://pypi.org/project/micropython-servo/)
 
-Additionally, I consulted the following package to learn how to connect to the Adafruit MQTT broker using paho-mqtt, although I did not integrate it into the final program:
+Additionally, I referred to the following package to figure out how to connect to the Adafruit MQTT broker using paho-mqtt, although I did not integrate it directly into the final program:
 
 - [Adafruit IO MQTT Package](https://github.com/adafruit/Adafruit_IO_Python/blob/master/Adafruit_IO/mqtt_client.py)
